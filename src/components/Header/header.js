@@ -9,8 +9,9 @@ class Header extends Component {
 					<div className="navbar-header center pull-left">
 						<a href="index.html" className="navbar-brand">
 							<small>
+								<i className="fa fa-check-square-o"></i>
+								&nbsp;
 								JustDoIT  
-								<i className="fa fa-bolt"></i>
 							</small>
 						</a>
 					</div>

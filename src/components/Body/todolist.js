@@ -20,6 +20,7 @@ class TodoList extends Component {
 											</button>
 										</span>
 									</div>
+									&nbsp;
 									<button className="btn btn-sm btn-danger" type="button">Delete Completed</button>
 								</form>
 								<h1 id="status">Status: <span id="finished">0</span> of <span id="total">8</span></h1>
@@ -34,14 +35,14 @@ class TodoList extends Component {
 
 										<li>
 											<a data-toggle="tab" href="#active">
-												Active 
+												Active &nbsp;
 												<span className="badge badge-warning">4</span>
 											</a>
 										</li>
 
 										<li>
 											<a data-toggle="tab" href="#completed">
-												Completed 
+												Completed &nbsp;
 												<span className="badge badge-success">6</span>
 											</a>
 										</li>

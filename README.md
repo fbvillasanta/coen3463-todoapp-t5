@@ -31,4 +31,4 @@ npm run build
 ```
 npm start
 ```
-* Open a browser and visit ```localhost:3000```.
+* Open a browser and visit ```localhost:3000/```.
