@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+	head
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		meta(charset='utf-8')
+		title Just Do IT
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+		// bootstrap & fontawesome
+		link(rel='stylesheet', href='./stylesheets/bootstrap.min.css')
+		link(rel='stylesheet', href='./stylesheets/font-awesome.min.css')
+		// page specific plugin styles
+		link(rel='stylesheet', href='./stylesheets/style.css')
+		// text fonts
+		link(rel='stylesheet', href='./stylesheets/fonts.googleapis.com.css')
+		// ace styles
+		link#main-ace-style.ace-main-stylesheet(rel='stylesheet', href='./stylesheets/ace.min.css')
+		link(rel='stylesheet', href='./stylesheets/ace-skins.min.css')
+		link(rel='stylesheet', href='./stylesheets/ace-rtl.min.css')
+		// inline styles related to this page
+		// ace settings handler
+		script(src='./javascripts/ace-extra.min.js')
+	body.no-skin
+		block content
+		block scripts
+		script(src='./javascripts/jquery-2.1.4.min.js')
+		// <![endif]
+		script(type='text/javascript').
+			if('ontouchstart' in document.documentElement) document.write("<script src='../public/javascripts/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		script(src='./javascripts/bootstrap.min.js')
+		// page specific plugin scripts
+		// ace scripts
+		script(src='./javascripts/ace-elements.min.js')
+		script(src='./javascripts/ace.min.js')
+		script(type='text/javascript', src='/build/bundle.js')
