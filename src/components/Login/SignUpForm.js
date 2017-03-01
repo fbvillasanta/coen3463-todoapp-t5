@@ -1,3 +1,6 @@
+/**
+ * Created by TEST on 3/1/2017.
+ */
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 class SignUpForm extends Component {
@@ -17,9 +20,7 @@ class SignUpForm extends Component {
                                     </h1>
                                     <h4 className="blue" id="id-company-text">a ToDo List Application</h4>
                                 </div>
-
                                 <div className="space-6"></div>
-
                                 <div className="position-relative">
                                     <div id="signup-box" className="signup-box visible widget-box no-border">
                                         <div className="widget-body">
@@ -31,12 +32,12 @@ class SignUpForm extends Component {
 
                                                 <div className="space-6"></div>
 
-                                                <form>
+                                                <form action="/register" method='post'>
                                                     <fieldset>
                                                         <label className="block clearfix">
                                                             <label>Email</label>
                                                             <span className="block input-icon input-icon-right">
-                                                                <input type="email" className="form-control" placeholder="Email" />
+                                                                <input type="email" name="email" className="form-control" placeholder="Email" />
                                                                 <i className="ace-icon fa fa-envelope"></i>
                                                             </span>
                                                         </label>
@@ -44,7 +45,7 @@ class SignUpForm extends Component {
                                                         <label className="block clearfix">
                                                             <label>Username</label>
                                                             <span className="block input-icon input-icon-right">
-                                                                <input type="text" className="form-control" placeholder="Username" />
+                                                                <input type="text" name="username" className="form-control" placeholder="Username" />
                                                                 <i className="ace-icon fa fa-user"></i>
                                                             </span>
                                                         </label>
@@ -52,18 +53,18 @@ class SignUpForm extends Component {
                                                         <label className="block clearfix">
                                                             <label>Password</label>
                                                             <span className="block input-icon input-icon-right">
-                                                                <input type="password" className="form-control" placeholder="Password" />
+                                                                <input type="password" name="password" className="form-control" placeholder="Password" />
                                                                 <i className="ace-icon fa fa-lock"></i>
                                                             </span>
                                                         </label>
 
-                                                        <label className="block clearfix">
-                                                            <label>Re-type password</label>
-                                                            <span className="block input-icon input-icon-right">
-                                                                <input type="password" className="form-control" placeholder="Repeat password" />
-                                                                <i className="ace-icon fa fa-retweet"></i>
-                                                            </span>
-                                                        </label>
+                                                        {/*<label className="block clearfix">*/}
+                                                            {/*<label>Re-type password</label>*/}
+                                                            {/*<span className="block input-icon input-icon-right">*/}
+                                                                {/*<input type="password" name="confirmPass" className="form-control" placeholder="Repeat password" />*/}
+                                                                {/*<i className="ace-icon fa fa-retweet"></i>*/}
+                                                            {/*</span>*/}
+                                                        {/*</label>*/}
 
                                                         <div className="space"></div>
 
@@ -73,7 +74,7 @@ class SignUpForm extends Component {
                                                                 <span className="bigger-110">Reset</span>
                                                             </button>
 
-                                                            <button type="button" className="width-65 pull-right btn btn-sm btn-success">
+                                                            <button type="submit" value="signup" className="width-65 pull-right btn btn-sm btn-success">
                                                                 <span className="bigger-110">Register</span>
 
                                                                 <i className="ace-icon fa fa-arrow-right icon-on-right"></i>
@@ -85,8 +86,8 @@ class SignUpForm extends Component {
                                             <div className="toolbar center">
                                                 <Link to="/auth">
                                                     <a className="back-to-login-link">
-                                                    <i className="ace-icon fa fa-arrow-left"></i>
-                                                    Back to login
+                                                        <i className="ace-icon fa fa-arrow-left"></i>
+                                                        Back to login
                                                     </a>
                                                 </Link>
                                             </div>

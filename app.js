@@ -10,14 +10,11 @@ var fs = require('fs');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var User = require('./models/users');
-
+var session = require('express-session');
 
 var app = express();
 
-passport.use(new LocalStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
-
+mongoose.Promise = global.Promise;
 var mdbUrl = "mongodb://127.0.0.1:27017/thesisIt";
 
 var db = require('./db'); //mongoose is in db.js
@@ -42,7 +39,21 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret: 'secret',
+  resave: true,
+  saveUninitialized: false
+}));
 
+
+passport.use(User.createStrategy());
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+// passport configuration
+app.use(passport.initialize());
+app.use(passport.session());
 app.use('/', index);
 
 // catch 404 and forward to error handler

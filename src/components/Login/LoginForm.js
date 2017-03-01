@@ -32,7 +32,7 @@ const LoginForm = ({
                                                 </h4>
                                                 {errors.summary && <p className="error-message">{errors.summary}</p>}
                                                 <div className="space-6"></div>
-                                                <form action="/auth" onSubmit={onSubmit}>
+                                                <form action="/" onSubmit={onSubmit}>
                                                     <fieldset>
                                                         <label className="block clearfix">
                                                             <label>Username</label>

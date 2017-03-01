@@ -5,6 +5,7 @@ import Todo from '../containers/todolistContainer';
 // import Login from '../components/Login/login';
 import LoginPage from '../containers/LoginPage';
 import SignUpForm from '../components/Login/SignUpForm';
+// import SignUpPage from '../containers/SignUpPage';
 import ForgotForm from '../components/Login/ForgotForm';
 const Routes = (props) => (
 	<Router {...props}>
